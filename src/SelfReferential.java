@@ -9,11 +9,17 @@ public class SelfReferential {
                 if (i == k) {
                     count++;
                 }
-                if (count == k) {
-                    isSelfReferential = true;
-                }else {
-                    isSelfReferential = false;
-                }
+//                if (count == k) {
+//                    isSelfReferential = true;
+//                }else {
+//                    isSelfReferential = false;
+//                }
+            }
+            if(a[i] == count){
+                isSelfReferential = true;
+            }else {
+                isSelfReferential = false;
+                break;
             }
             count = 0;
             i++;
@@ -29,7 +35,7 @@ public class SelfReferential {
         System.out.println(isSelfReferential(new int[]{2, 0, 2, 0}));
         System.out.println(isSelfReferential(new int[]{2, 1, 2, 0, 0}));
         System.out.println(isSelfReferential(new int[]{ 2, 0, 0}));
-        System.out.println(isSelfReferential(new int[]{3, 2, 1, 1, 0, 0, 2}));
+        System.out.println(isSelfReferential(new int[]{3, 2, 1, 1, 0, 0, 0}));
         System.out.println(isSelfReferential(new int[]{4, 2, 1, 0, 1, 0, 0, 0}));
         System.out.println(isSelfReferential(new int[]{5, 2, 1, 0, 0, 1, 0, 0, 0}));
         System.out.println(isSelfReferential(new int[]{6, 2, 1, 0, 0, 0, 1, 0, 0, 0}));
